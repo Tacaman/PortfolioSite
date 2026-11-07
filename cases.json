@@ -1,0 +1,266 @@
+[
+  {
+    "title": [
+      "Suppressing false startup alarms",
+      "Supressão de falsos alarmes no arranque"
+    ],
+    "org": "Vestas / Capgemini Engineering",
+    "tags": "control embedded",
+    "goal": [
+      "Prevent false converter startup alarms from causing unnecessary periods without production.",
+      "Evitar que falsos alarmes no arranque do conversor provoquem períodos desnecessários sem produção."
+    ],
+    "work": [
+      "Queried alarm histories in SQL across turbine and software variants, investigated supervision logic in C and corrected causes. Added startup suppression windows where hardware and software initialisation were asynchronous.",
+      "Analisei históricos de alarmes com SQL, cruzando variantes de turbinas e versões de software. Investiguei e corrigi a lógica de supervisão em C e introduzi janelas de supressão quando o arranque do hardware e do software não era simultâneo."
+    ],
+    "test": [
+      "Converter emulation followed by tests on a test wind turbine.",
+      "Emulação do conversor e testes numa turbina eólica de ensaio."
+    ],
+    "result": [
+      "False alarms suppressed and associated non-production periods reduced in real turbines. No quantified energy or financial savings are claimed.",
+      "Supressão de falsos alarmes e redução dos períodos de não produção associados em turbinas reais. Impacto energético e financeiro ainda não quantificado."
+    ]
+  },
+  {
+    "title": [
+      "Mitigating reactive-power restart spikes",
+      "Mitigação de picos de potência reactiva"
+    ],
+    "org": "Vestas / Capgemini Engineering",
+    "tags": "control embedded",
+    "goal": [
+      "Reduce abrupt reactive-power changes when turbines resume operation after a stop.",
+      "Reduzir variações bruscas de potência reactiva quando as turbinas retomam a operação após uma paragem."
+    ],
+    "work": [
+      "Traced the interaction between the plant controller (PPC) and converter. Corrected converter C code so that reactive-power capability is reported as zero in Off and other relevant states.",
+      "Investiguei a interacção entre o controlador do parque (PPC) e o conversor. Corrigi o código C do conversor para reportar capacidade de regulação reactiva nula no estado Off e noutros estados relevantes."
+    ],
+    "test": [
+      "Joint converter/PPC emulation and field tests performed by the reporting teams.",
+      "Emulação conjunta do conversor e do PPC e testes em parques reais realizados pelas equipas que reportaram o problema."
+    ],
+    "result": [
+      "Correct capability reporting and mitigated restart spikes. The converter-side change is distinct from the anti-windup limitation identified in the PPC.",
+      "Reporte correcto da capacidade de regulação e mitigação dos picos na retoma. A correcção no conversor distingue-se da limitação de anti-windup identificada no PPC."
+    ]
+  },
+  {
+    "title": [
+      "250 kW power module for MCS",
+      "Módulo de potência de 250 kW para MCS"
+    ],
+    "org": "i-charging · 2023–2025",
+    "tags": "power embedded hardware control",
+    "goal": [
+      "Develop an in-house module for a modular Megawatt Charging System for heavy-duty electric vehicles.",
+      "Desenvolver um módulo próprio para um Megawatt Charging System modular, destinado a veículos eléctricos pesados."
+    ],
+    "work": [
+      "Contributed across circuit simulation, prototype debugging and firmware. Selected a DC/DC gate driver and designed an adapter PCB with connector adaptation and command/feedback level shifting. Developed STM firmware for acquisition, contactors, MOSFET status, OTA updates, supervision and AC/DC–DC/DC control. Used LTspice, PSIM, Altium, STM32CubeIDE and CAN with BUSMASTER/Kvaser.",
+      "Contribuí para a simulação de circuitos, diagnóstico de protótipos e firmware. Seleccionei um gate driver DC/DC e desenvolvi uma placa de adaptação, incluindo layout, adaptação de conectores e níveis de sinais de comando e realimentação. Programei aquisição de sinais, contactores, estados dos MOSFETs, actualizações OTA, supervisões e controlo AC/DC–DC/DC em microcontroladores STM. Usei LTspice, PSIM, Altium, STM32CubeIDE e CAN com BUSMASTER/Kvaser."
+    ],
+    "test": [
+      "Open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW, including two modules in parallel. Component replacement and prototype rework.",
+      "Testes em malha aberta com cargas passivas e em malha fechada com cargas bidireccionais até 500 kW, incluindo dois módulos em paralelo. Reparação e substituição de componentes de protótipos."
+    ],
+    "result": [
+      "The team developed a 250 kW module ready to begin certification. Output ranges: 0–1250 V and 0–250 A, subject to the 250 kW power limit; maximum voltage and current are not simultaneous.",
+      "A equipa desenvolveu um módulo de 250 kW pronto para iniciar a certificação. Gamas de saída: 0–1250 V e 0–250 A, sujeitas ao limite de 250 kW; tensão e corrente máximas não são simultâneas."
+    ]
+  },
+  {
+    "title": [
+      "Battery monitoring and balancing",
+      "Monitorização e balanceamento de baterias"
+    ],
+    "org": "Continental Engineering Services",
+    "tags": "hardware",
+    "goal": [
+      "Improve the monitoring and balancing circuits of a battery management system (BMS).",
+      "Melhorar os circuitos de monitorização e balanceamento de um sistema de gestão de baterias (BMS)."
+    ],
+    "work": [
+      "Reviewed existing schematics, researched integrated monitoring/protection ICs and proposed an adaptation of the circuit. Evaluated temperature, overcurrent and cell-imbalance protection and balancing functions.",
+      "Analisei os esquemas existentes, comparei circuitos integrados de monitorização e protecção e propus a adaptação do circuito, considerando temperatura, sobrecorrente, desequilíbrio das células e balanceamento."
+    ],
+    "test": [
+      "LTspice simulation using the supplier model and schematic editing in Zuken CR5000.",
+      "Simulação em LTspice com o modelo do fornecedor e edição de esquemas em Zuken CR5000."
+    ],
+    "result": [
+      "Proposed a replacement monitoring/balancing IC and associated circuit. No measured performance improvement is claimed.",
+      "Proposta de substituição do circuito integrado de monitorização e balanceamento e adaptação do circuito associado, sem ganhos de desempenho quantificados."
+    ]
+  },
+  {
+    "title": [
+      "Autonomous charging robot",
+      "Robô de carregamento autónomo"
+    ],
+    "org": "Continental Engineering Services",
+    "tags": "hardware",
+    "goal": [
+      "Develop hardware for automatic coupling between a ground-mounted charger and a vehicle module.",
+      "Desenvolver o hardware de acoplamento automático entre um carregador instalado no chão e um módulo no veículo."
+    ],
+    "work": [
+      "Supported the overall hardware architecture and developed vehicle-module subsystems. Produced diagrams and documentation in Visio/Word and schematics in Zuken CR5000, within a distributed team.",
+      "Apoiei a definição da arquitectura de hardware e desenvolvi subsistemas do módulo do veículo. Produzi diagramas e documentação em Visio/Word e esquemas em Zuken CR5000, numa equipa distribuída."
+    ],
+    "test": [
+      "Review and validation by the project lead.",
+      "Revisão e validação pelo responsável técnico do projecto."
+    ],
+    "result": [
+      "Hardware architecture and base circuits defined. The project was interrupted before completion.",
+      "Definição da arquitectura e dos circuitos base. O projecto foi interrompido antes de estar concluído."
+    ]
+  },
+  {
+    "title": [
+      "3.5 kW bidirectional DC/DC converter",
+      "Conversor DC/DC bidireccional de 3,5 kW"
+    ],
+    "org": "Continental Engineering Services",
+    "tags": "power hardware",
+    "goal": [
+      "Supply vehicle modules at different voltage levels from a 48 V battery.",
+      "Alimentar módulos de um veículo a diferentes tensões a partir de uma bateria de 48 V."
+    ],
+    "work": [
+      "Developed synchronous-buck schematics and documentation, validated circuits in simulation and analysed MOSFET losses to compare parallel-device configurations. Used Zuken CR5000, LTspice and MATLAB.",
+      "Desenvolvi esquemas de um buck síncrono e documentação técnica, validei circuitos por simulação e analisei perdas nos MOSFETs para comparar configurações de dispositivos em paralelo. Usei Zuken CR5000, LTspice e MATLAB."
+    ],
+    "test": [
+      "Circuit simulation and technical-documentation review.",
+      "Simulação dos circuitos e revisão da documentação técnica."
+    ],
+    "result": [
+      "Development progressed to certification testing. Certification completion is not claimed.",
+      "Desenvolvimento até à fase de testes de certificação, sem confirmação de certificação concluída."
+    ]
+  },
+  {
+    "title": [
+      "Power meter evaluation for wind plant control",
+      "Avaliação de um medidor para controlo de parques eólicos"
+    ],
+    "org": "Vestas · 2020–2021",
+    "tags": "control hardware",
+    "goal": [
+      "Evaluate an alternative supplier power meter for a wind plant controller requested by a customer in Germany.",
+      "Avaliar um medidor de potência de outro fornecedor para o controlador de um parque eólico, a pedido de um cliente na Alemanha."
+    ],
+    "work": [
+      "Compared documentation and MATLAB/Simulink control functions. Developed automated tests and evaluated active/reactive power and voltage tracking, response time, overshoot and oscillation. Used C++ tooling, Studio 5000, Git, Jira and Confluence.",
+      "Comparei documentação e funções de controlo em MATLAB/Simulink. Desenvolvi testes automáticos e avaliei seguimento de potência activa/reactiva e tensão, tempo de resposta, sobreelevação e oscilações. Utilizei ferramentas C++, Studio 5000, Git, Jira e Confluence."
+    ],
+    "test": [
+      "Emulation with signal-generation equipment, followed by remote tests on a wind farm in Germany.",
+      "Emulação com equipamento de geração de sinais, seguida de testes remotos num parque eólico na Alemanha."
+    ],
+    "result": [
+      "Validated use of the alternative meter and documented reduced performance in several functions compared with the usual configuration.",
+      "Validação da utilização do medidor alternativo, com documentação das limitações de desempenho em várias funções face à configuração habitual."
+    ]
+  },
+  {
+    "title": [
+      "Master’s thesis: bidirectional converter control",
+      "Tese de mestrado: controlo de um conversor bidireccional"
+    ],
+    "org": "FEUP · 2020",
+    "tags": "power control",
+    "goal": [
+      "Model an isolated bidirectional dual half-bridge converter with independently controlled duty cycle and phase shift.",
+      "Modelar um conversor isolado bidireccional dual half-bridge com controlo independente do ciclo de trabalho e do desfasamento."
+    ],
+    "work": [
+      "Derived power-transfer and transformer RMS-current relationships, developed averaged and state-space models across two time scales, and studied linearisation and MIMO control with PID and cross compensation. Used MATLAB/Simulink, PLECS and Maple.",
+      "Deduzi relações de potência transferida e corrente eficaz no transformador, desenvolvi modelos por média e em espaço de estados com duas escalas temporais e estudei linearização e controlo MIMO com PID e compensação cruzada. Usei MATLAB/Simulink, PLECS e Maple."
+    ],
+    "test": [
+      "Compared simplified mathematical models and control behaviour against detailed converter simulations.",
+      "Comparei os modelos matemáticos simplificados e o comportamento do controlo com simulações detalhadas do conversor."
+    ],
+    "result": [
+      "Converter analysis and modelling, with cross compensation studied on a simplified MIMO model. Simulation-based work without a physical prototype.",
+      "Análise e modelação do conversor, com estudo de compensação cruzada num modelo MIMO simplificado. Trabalho validado por simulação, sem protótipo físico."
+    ]
+  },
+  {
+    "title": [
+      "480 W Formula Student converter",
+      "Conversor de 480 W para Formula Student"
+    ],
+    "org": "SDU · Erasmus · 2018–2019",
+    "tags": "power hardware",
+    "goal": [
+      "Build and test an isolated Two-Switch Forward converter in a three-student team.",
+      "Construir e testar um conversor isolado Two-Switch Forward numa equipa de três estudantes."
+    ],
+    "work": [
+      "Contributed to planning, topology comparison, semiconductor/passive/transformer loss analysis, assembly and final test analysis.",
+      "Participei no planeamento, comparação de topologias, análise de perdas dos semicondutores, componentes passivos e transformador, montagem e análise dos ensaios finais."
+    ],
+    "test": [
+      "Laboratory tests on the converter prototype.",
+      "Ensaios laboratoriais do protótipo do conversor."
+    ],
+    "result": [
+      "Hands-on experience in power converter design, prototyping and validation.",
+      "Experiência prática no projecto, prototipagem e validação de conversores de potência."
+    ]
+  },
+  {
+    "title": [
+      "Production automation with PLC, SCADA and MES",
+      "Automação com PLC, SCADA e MES"
+    ],
+    "org": "FEUP · Academic / Académico",
+    "tags": "embedded control",
+    "goal": [
+      "Control a small-scale production line with conveyors, identification sensors and machining robots.",
+      "Controlar uma linha de produção à escala reduzida, com tapetes, sensores de identificação e robots de maquinação."
+    ],
+    "work": [
+      "Programmed PLCs in Structured Text, Ladder, FBD and SFC, developed a simple SCADA interface and a simplified MES in C++ to manage different product recipes.",
+      "Programei PLCs em Structured Text, Ladder, FBD e SFC, desenvolvi uma interface SCADA simples e um MES simplificado em C++ para gerir produtos com diferentes receitas."
+    ],
+    "test": [
+      "Integrated line control, recipe management and a visual interface for state monitoring, emergency stop, pause and resume.",
+      "Integração do controlo da linha, gestão de receitas e interface de monitorização, paragem de emergência, pausa e retoma."
+    ],
+    "result": [
+      "Integrated production control and order-management functions in an academic system.",
+      "Integração das funções de controlo de produção e gestão de pedidos num sistema académico."
+    ]
+  },
+  {
+    "title": [
+      "AGV navigation and team coordination",
+      "Navegação de um AGV e coordenação de equipa"
+    ],
+    "org": "FEUP · Academic / Académico",
+    "tags": "embedded control",
+    "goal": [
+      "Develop a simplified automated guided vehicle over six months in a ten-student team.",
+      "Desenvolver um veículo guiado automaticamente ao longo de seis meses, numa equipa de dez estudantes."
+    ],
+    "work": [
+      "Helped define requirements, divide work and coordinate the team, including motivation and conflict management. Implemented C++ straight-line navigation between points using position estimates from the team’s Kalman filter.",
+      "Ajudei a definir requisitos, distribuir trabalho e coordenar a equipa, incluindo a gestão de motivações e conflitos. Implementei navegação rectilínea entre pontos em C++, usando estimativas de posição do filtro de Kalman desenvolvido por colegas."
+    ],
+    "test": [
+      "Integration of the navigation algorithm with position estimates and vehicle subsystems.",
+      "Integração do algoritmo de navegação com as estimativas de posição e os subsistemas do veículo."
+    ],
+    "result": [
+      "Contribution in navigation and team coordination; the Kalman filter was developed by other team members.",
+      "Contributo na navegação e na coordenação da equipa; o filtro de Kalman foi desenvolvido por outros elementos."
+    ]
+  }
+]
