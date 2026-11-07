@@ -1,0 +1,15 @@
+/* Palette sampled from the updated CV: navy #172638, blue #0070ad, pale blue #edf8fc, white. */
+:root{--bg:#ffffff;--panel:#edf8fc;--line:#ccdfe9;--ink:#172638;--muted:#536478;--lime:#0070ad}
+header{background:rgba(255,255,255,.97)}
+.instrument{--bg:#172638;--panel:#203b54;--line:#426078;--ink:#ffffff;--muted:#c7dceb;--lime:#66caff;background:var(--bg);color:var(--ink);box-shadow:0 22px 55px #17263818}
+.instrument svg rect:not(.schematic-node rect){fill:transparent}
+.instrument svg .schematic-node rect{fill:#203b54;stroke:#6b9ab7}
+.instrument svg .schematic-node[data-active=true] rect,.instrument svg .schematic-node:hover rect,.instrument svg .schematic-node:focus-visible rect{fill:#204e6d;stroke:#66caff}
+.instrument svg>g:not(.schematic-node){stroke:#84abc4}
+.instrument svg>g.feedback-path[data-active=true]{stroke:#66caff;color:#66caff}
+.instrument .feedback-path{color:#84abc4}.instrument svg .wave,.instrument svg>path{stroke:#66caff}
+.instrument svg pattern circle{fill:#365772}.instrument svg text{fill:var(--muted)}.instrument svg text.label{fill:#ffffff}
+.project{background:#fff;border-top:3px solid #0070ad}.project[open]{background:#edf8fc}.job-index{color:#536478}
+.domains{background:#edf8fc}.btn.primary{color:#fff}.lang[aria-pressed=true],.filters button[aria-pressed=true]{color:#fff}.scope-controls button[aria-pressed=true]{color:#172638}
+.proof{border-bottom:1px solid var(--line)}.proof>div{padding-left:16px;border-left:3px solid #0070ad}
+@media print{.instrument{display:none}.project{background:white}.domains{background:white}}
