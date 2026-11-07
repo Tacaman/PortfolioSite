@@ -1,8 +1,8 @@
 # Diogo Rodrigues — Engineering portfolio
 
-Live site: https://tacaman.github.io/
+Live site: https://tacaman.github.io/PortfolioSite/
 
-Original green-and-black palette: https://tacaman.github.io/?theme=classic
+Original green-and-black palette: https://tacaman.github.io/PortfolioSite/?theme=classic
 
 Static, bilingual personal portfolio, ready for GitHub Pages. The website is in `dist/` and needs no build or external dependencies.
 
