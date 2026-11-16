@@ -2,7 +2,7 @@
   {
     "title": [
       "Mitigating reactive-power restart spikes",
-      "Mitigação de picos de potência reactiva"
+      "Mitigação de picos de potência reativa no rearranque"
     ],
     "org": "Capgemini Engineering (Vestas)",
     "tags": "control embedded",
@@ -12,11 +12,11 @@
     ],
     "work": [
       "Traced the interaction between the power plant controller (PPC) and the converter, identified the cause of the spikes and corrected the C logic that reports reactive-power capability in specific operating states.",
-      "Analisei a interação entre o controlador do parque (PPC) e o conversor, identifiquei a causa dos picos e corrigi a lógica em C que comunica a capacidade de potência reativa em estados de operação específicos."
+      "Analisei a interação entre o controlador do parque eólico (PPC) e o conversor, identifiquei a causa dos picos e corrigi a lógica em C que comunica ao PPC os limites de potência reativa do conversor em determinados estados de funcionamento."
     ],
     "test": [
       "Verified reactive-power reporting in converter/PPC emulation, followed by field verification with the people who reported the issue.",
-      "Verifiquei o reporte de potência reativa em emulação do conversor e PPC, seguido de verificação no terreno com quem reportou o problema."
+      "Verifiquei os limites comunicados ao PPC em emulação conjunta do conversor e do PPC. A correção foi depois verificada no terreno com a equipa que reportou o problema."
     ],
     "result": [
       "Corrected capability reporting and mitigated restart spikes. This may help in grid compliance tests and reduce electrical stress during restart.",
@@ -44,7 +44,7 @@
     ],
     "work": [
       "Queried the turbine database to identify affected sites, clarified the required settings and corrected incomplete or incorrect values and conflicting override requests.",
-      "Consultei a base de dados de turbinas para identificar os parques afetados, clarifiquei os valores exigidos e corrigi parâmetros incompletos ou incorretos e pedidos de substituição contraditórios."
+      "Consultei a base de dados de turbinas para identificar os parques afetados, confirmei os valores exigidos e corrigi parâmetros incompletos ou incorretos. Resolvi também pedidos de alteração de parâmetros que entravam em conflito."
     ],
     "test": [
       "Confirmed the affected sites and settings with the Finland customer representative who reported the issue.",
@@ -72,7 +72,7 @@
     ],
     "work": [
       "Queried field alarms under conditions associated with false events and traced the supervision logic. Corrected root causes where possible. Where that was not possible, implemented targeted startup suppression, including for asynchronous hardware and software initialisation.",
-      "Pesquisei alarmes de campo em condições associadas a falsos eventos e analisei a lógica de supervisão. Corrigi a causa quando possível e, nos restantes casos, implementei supressões específicas no arranque, incluindo para inicializações assíncronas de hardware e software."
+      "Analisei registos de alarmes no terreno e a lógica de supervisão para identificar disparos indevidos. Corrigi a causa sempre que possível; nos restantes casos, implementei supressões específicas para o arranque, por exemplo quando o hardware e o software não terminavam a inicialização ao mesmo tempo."
     ],
     "test": [
       "Tested the corrections and suppressions in emulation and then on a real test turbine.",
@@ -92,7 +92,7 @@
   {
     "title": [
       "250 kW power module for MCS",
-      "Módulo de potência de 250 kW para MCS"
+      "Módulo de potência de 250 kW para carregamento MCS"
     ],
     "org": "i-charging",
     "tags": "power embedded hardware control",
@@ -102,7 +102,7 @@
     ],
     "work": [
       "Contributed to circuit design, simulation, prototype debugging, board rework, control firmware and lab validation. Worked on STM firmware for acquisition, peripherals, MOSFET status and protection, OTA updates, supervision and power-converter control. Selected a DC/DC gate driver and designed an adapter PCB for connector adaptation and command and feedback level shifting.",
-      "Contribuí para o projeto e simulação de circuitos, diagnóstico de protótipos, retrabalho de placas, firmware de controlo e validação em laboratório. Trabalhei em firmware STM para aquisição, periféricos, estado e proteção de MOSFETs, atualizações OTA, supervisão e controlo dos conversores. Selecionei um gate driver DC/DC e projetei uma placa adaptadora para a ligação e adaptação dos níveis dos sinais de comando e realimentação."
+      "Contribuí para o projeto e simulação dos circuitos, o diagnóstico de protótipos, o retrabalho de placas e a validação em laboratório. Desenvolvi firmware para microcontroladores STM, incluindo aquisição de sinais, controlo de periféricos, supervisão e proteção de MOSFETs, atualizações OTA e controlo dos conversores. Selecionei o circuito de acionamento (gate driver) do estágio DC/DC e projetei uma placa adaptadora para a interligação e a adaptação dos níveis dos sinais de comando e realimentação."
     ],
     "test": [
       "Open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW, including two modules in parallel. Component replacement and prototype rework.",
@@ -122,7 +122,7 @@
   {
     "title": [
       "3.5 kW bidirectional DC/DC converter",
-      "Conversor DC/DC bidireccional de 3,5 kW"
+      "Conversor DC/DC bidirecional de 3,5 kW"
     ],
     "org": "Continental Engineering Services",
     "tags": "power hardware",
@@ -132,7 +132,7 @@
     ],
     "work": [
       "Developed synchronous-buck schematics and documentation, simulated the circuits and analysed MOSFET losses for different parallel-device configurations.",
-      "Desenvolvi esquemas e documentação de um buck síncrono, simulei os circuitos e analisei perdas nos MOSFETs para diferentes configurações em paralelo."
+      "Desenvolvi os esquemas e a documentação de um conversor buck síncrono. Simulei os circuitos e calculei as perdas nos MOSFETs para comparar configurações com dispositivos em paralelo."
     ],
     "test": [
       "Circuit simulation and review of technical documentation.",
@@ -152,7 +152,7 @@
   {
     "title": [
       "Battery monitoring and balancing",
-      "Monitorização e balanceamento de baterias"
+      "Monitorização e balanceamento de células de bateria"
     ],
     "org": "Continental Engineering Services",
     "tags": "hardware",
@@ -162,7 +162,7 @@
     ],
     "work": [
       "Reviewed schematics, researched monitoring and protection ICs, and proposed circuit changes. Evaluated temperature, overcurrent, cell-imbalance protection and balancing functions.",
-      "Revi esquemas, pesquisei circuitos integrados de monitorização e proteção e propus alterações. Avaliei proteção térmica, sobrecorrente, desequilíbrio de células e balanceamento."
+      "Revi os esquemas e avaliei circuitos integrados de monitorização e proteção. Propus alterações para melhorar o balanceamento entre células e a proteção contra sobrecorrente e temperaturas fora dos limites."
     ],
     "test": [
       "Simulated the proposed circuits using the supplier’s device model.",
@@ -222,7 +222,7 @@
     ],
     "work": [
       "Compared the new meter’s documentation with that of the existing unit. Developed automated tests for active and reactive power and voltage tracking, response time, overshoot and oscillations.",
-      "Comparei a documentação do novo medidor com a do equipamento em uso. Desenvolvi testes automatizados para o seguimento de potência ativa, reativa e tensão, tempos de resposta, sobreelevação e oscilações."
+      "Comparei a documentação do novo medidor com a do equipamento em serviço. Desenvolvi testes automatizados para avaliar o seguimento das referências de potência ativa, potência reativa e tensão, bem como o tempo de resposta, a sobreelevação e as oscilações."
     ],
     "test": [
       "Emulation with signal-generation equipment, followed by remote tests on a real wind farm in Germany.",
@@ -248,11 +248,11 @@
     "tags": "power control",
     "goal": [
       "Model an isolated bidirectional dual half-bridge converter with independently controlled duty cycle and phase shift.",
-      "Modelar um conversor isolado bidireccional dual half-bridge com controlo independente do ciclo de trabalho e do desfasamento."
+      "Modelar um conversor bidirecional isolado de dupla meia ponte, com controlo independente do ciclo de trabalho e do desfasamento."
     ],
     "work": [
       "Analysed the isolated dual half-bridge converter and derived power-transfer and transformer RMS-current relationships under duty-cycle and phase-shift control. Developed a two-time-scale averaged state-space model and studied its linearisation and MIMO control with PID and cross compensation.",
-      "Analisei o conversor isolado de dupla meia ponte e deduzi relações de transferência de potência e corrente eficaz no transformador em função do duty cycle e do desfasamento. Desenvolvi um modelo médio de estados com duas escalas de tempo e estudei a linearização e o controlo MIMO com PID e compensação cruzada."
+      "Deduzi expressões para a potência transferida e a corrente eficaz no transformador em função do ciclo de trabalho e do desfasamento. Desenvolvi um modelo médio em espaço de estados com duas escalas de tempo e estudei a sua linearização e o controlo multivariável (MIMO) com PID e compensação cruzada."
     ],
     "test": [
       "Compared model predictions and control behaviour with detailed simulations, including the effects of switching frequency, terminal voltages and circuit R, L and C values. Successfully defended the thesis before a specialist panel.",
@@ -356,7 +356,7 @@
     "date": "2017",
     "tools": [
       "CODESYS, university PLC emulator, factory emulator, Visual Studio Code (C++), PostgreSQL accessed via the MES, and OPC UA between the MES and PLC.",
-      "CODESYS, university PLC emulator, factory emulator, Visual Studio Code (C++), PostgreSQL accessed via the MES, and OPC UA between the MES and PLC."
+      "CODESYS, emulador de PLC da universidade, emulador da linha de produção, Visual Studio Code (C++), PostgreSQL consultado através do MES e comunicação OPC UA entre o MES e o PLC."
     ]
   }
 ]
