@@ -2,25 +2,25 @@
   {
     "title": [
       "Mitigating reactive-power restart spikes",
-      "Mitigação de picos de potência reativa no rearranque"
+      "Mitigação de picos de potência reactiva no rearranque"
     ],
     "org": "Capgemini Engineering (Vestas)",
     "tags": "control embedded",
     "goal": [
       "Reduce abrupt reactive-power changes when turbines restart after a particular stop condition.",
-      "Reduzir variações bruscas de potência reativa no rearranque de turbinas após uma condição de paragem específica."
+      "Reduzir variações bruscas de potência reactiva no rearranque de turbinas após uma condição de paragem específica."
     ],
     "work": [
       "Traced the interaction between the power plant controller (PPC) and the converter, identified the cause of the spikes and corrected the C logic that reports reactive-power capability in specific operating states.",
-      "Analisei a interação entre o controlador do parque eólico (PPC) e o conversor, identifiquei a causa dos picos e corrigi a lógica em C que comunica ao PPC os limites de potência reativa do conversor em determinados estados de funcionamento."
+      "Analisei a interacção entre o controlador do parque eólico (PPC) e o conversor, identifiquei a causa dos picos e corrigi a lógica em C que comunica ao PPC os limites de potência reactiva do conversor em determinados estados de funcionamento."
     ],
     "test": [
       "Verified reactive-power reporting in converter/PPC emulation, followed by field verification with the people who reported the issue.",
-      "Verifiquei os limites comunicados ao PPC em emulação conjunta do conversor e do PPC. A correção foi depois verificada no terreno com a equipa que reportou o problema."
+      "Verifiquei os limites comunicados ao PPC em emulação conjunta do conversor e do PPC. A correcção foi depois verificada no terreno com a equipa que reportou o problema."
     ],
     "result": [
       "Corrected capability reporting and mitigated restart spikes. This may help in grid compliance tests and reduce electrical stress during restart.",
-      "Corrigi o reporte de capacidade e mitiguei os picos no rearranque. Isto poderá ajudar em ensaios de conformidade com a rede e reduzir o esforço elétrico no arranque."
+      "Corrigi o reporte de capacidade e mitiguei os picos no rearranque. Isto poderá ajudar em ensaios de conformidade com a rede e reduzir o esforço eléctrico no arranque."
     ],
     "id": "case-reactive",
     "date": "2026",
@@ -36,7 +36,7 @@
     "tags": "control",
     "title": [
       "Multi-site Converter Parameter Correction",
-      "Correção de parâmetros de conversores em vários parques"
+      "Correcção de parâmetros de conversores em vários parques"
     ],
     "goal": [
       "Correct grid-code-related converter settings across multiple wind farms in Finland.",
@@ -44,11 +44,11 @@
     ],
     "work": [
       "Queried the turbine database to identify affected sites, clarified the required settings and corrected incomplete or incorrect values and conflicting override requests.",
-      "Consultei a base de dados de turbinas para identificar os parques afetados, confirmei os valores exigidos e corrigi parâmetros incompletos ou incorretos. Resolvi também pedidos de alteração de parâmetros que entravam em conflito."
+      "Consultei a base de dados de turbinas para identificar os parques afectados, confirmei os valores exigidos e corrigi parâmetros incompletos ou incorrectos. Resolvi também pedidos de alteração de parâmetros que entravam em conflito."
     ],
     "test": [
       "Confirmed the affected sites and settings with the Finland customer representative who reported the issue.",
-      "Confirmei os parques afetados e os parâmetros com o representante do cliente na Finlândia que reportou o problema."
+      "Confirmei os parques afectados e os parâmetros com o representante do cliente na Finlândia que reportou o problema."
     ],
     "result": [
       "Aligned the converter settings at all identified Finnish sites with the applicable grid-code requirements.",
@@ -76,7 +76,7 @@
     ],
     "test": [
       "Tested the corrections and suppressions in emulation and then on a real test turbine.",
-      "Testei as correções e supressões em emulação e depois numa turbina de ensaio."
+      "Testei as correcções e supressões em emulação e depois numa turbina de ensaio."
     ],
     "result": [
       "Reduced periods of low production caused by false startup alarms.",
@@ -98,15 +98,15 @@
     "tags": "power embedded hardware control",
     "goal": [
       "Develop an in-house 250 kW module for a modular Megawatt Charging System for heavy-duty EVs.",
-      "Desenvolver internamente um módulo de 250 kW para um sistema modular de carregamento de veículos elétricos pesados."
+      "Desenvolver internamente um módulo de 250 kW para um sistema modular de carregamento de veículos eléctricos pesados."
     ],
     "work": [
       "Contributed to circuit design, simulation, prototype debugging, board rework, control firmware and lab validation. Worked on STM firmware for acquisition, peripheral control, MOSFET protection and control, OTA updates, supervision and power-converter control. Selected a DC/DC gate driver and designed (PCB layout) an adapter board.",
-      "Contribuí para o projeto e simulação de circuitos, diagnóstico de protótipos, retrabalho de placas, firmware de controlo e validação em laboratório. Desenvolvi firmware para microcontroladores STM para aquisição de sinais, controlo de periféricos, proteção e controlo de MOSFETs, atualizações OTA, supervisão e controlo dos conversores. Selecionei um gate driver para o estágio DC/DC e desenhei o layout de uma placa adaptadora."
+      "Contribuí para o projecto e simulação de circuitos, diagnóstico de protótipos, retrabalho de placas, firmware de controlo e validação em laboratório. Desenvolvi firmware para microcontroladores STM para aquisição de sinais, controlo de periféricos, protecção e controlo de MOSFETs, actualizações OTA, supervisão e controlo dos conversores. Seleccionei um gate driver para o estágio DC/DC e desenhei o layout de uma placa adaptadora."
     ],
     "test": [
       "Open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW (having two modules working in parallel). Component replacement and prototype rework.",
-      "Ensaios em malha aberta com cargas passivas e em malha fechada com cargas bidirecionais até 500 kW (com dois módulos a funcionar em paralelo). Substituição de componentes e retrabalho de protótipos."
+      "Ensaios em malha aberta com cargas passivas e em malha fechada com cargas bidireccionais até 500 kW (com dois módulos a funcionar em paralelo). Substituição de componentes e retrabalho de protótipos."
     ],
     "result": [
       "The team developed a 250 kW module ready to begin certification. Output ranges: 0–1250 V and 0–250 A, subject to the 250 kW power limit.",
@@ -116,13 +116,13 @@
     "date": "2023–2025",
     "tools": [
       "LTspice, PSIM, Altium, STM32CubeIDE, BUSMASTER/Kvaser (CAN); high-power bidirectional supply and load, bench supply, oscilloscope, multimeter, soldering station (including MCU replacement) and ST debugger.",
-      "LTspice, PSIM, Altium, STM32CubeIDE, BUSMASTER/Kvaser (CAN); fonte e carga bidirecionais de alta potência, fonte de bancada, osciloscópio, multímetro, estação de soldadura (incluindo substituição de microcontroladores) e depurador ST."
+      "LTspice, PSIM, Altium, STM32CubeIDE, BUSMASTER/Kvaser (CAN); fonte e carga bidireccionais de alta potência, fonte de bancada, osciloscópio, multímetro, estação de soldadura (incluindo substituição de microcontroladores) e depurador ST."
     ]
   },
   {
     "title": [
       "3.5 kW bidirectional DC/DC converter",
-      "Conversor DC/DC bidirecional de 3,5 kW"
+      "Conversor DC/DC bidireccional de 3,5 kW"
     ],
     "org": "Continental Engineering Services",
     "tags": "power hardware",
@@ -140,7 +140,7 @@
     ],
     "result": [
       "Delivered schematics, design documentation, simulation results and loss calculations.",
-      "Entreguei esquemas, documentação de projeto, resultados de simulação e cálculos de perdas."
+      "Entreguei esquemas, documentação de projecto, resultados de simulação e cálculos de perdas."
     ],
     "id": "case-automotive",
     "date": "2023",
@@ -162,7 +162,7 @@
     ],
     "work": [
       "Reviewed schematics, researched monitoring and protection ICs, and proposed circuit changes. Evaluated temperature, overcurrent, cell-imbalance protection and balancing functions.",
-      "Revi os esquemas e avaliei circuitos integrados de monitorização e proteção. Propus alterações para melhorar o balanceamento entre células e a proteção contra sobrecorrente e temperaturas fora dos limites."
+      "Revi os esquemas e avaliei circuitos integrados de monitorização e protecção. Propus alterações para melhorar o balanceamento entre células e a protecção contra sobrecorrente e temperaturas fora dos limites."
     ],
     "test": [
       "Simulated the proposed circuits using the supplier’s device model.",
@@ -170,7 +170,7 @@
     ],
     "result": [
       "Proposed improvements to battery cell balancing, monitoring and protection.",
-      "Propus melhorias no balanceamento, monitorização e proteção das células."
+      "Propus melhorias no balanceamento, monitorização e protecção das células."
     ],
     "id": "case-bms",
     "date": "2021–2022",
@@ -188,19 +188,19 @@
     "tags": "hardware",
     "goal": [
       "Develop a ground-mounted robotic charger and its connection to an EV module.",
-      "Desenvolver um carregador robótico instalado no solo e a ligação ao módulo do veículo elétrico."
+      "Desenvolver um carregador robótico instalado no solo e a ligação ao módulo do veículo eléctrico."
     ],
     "work": [
       "Supported the overall hardware architecture and developed vehicle-module subsystems, diagrams, documentation and schematics in a distributed team.",
-      "Apoiei a arquitetura global de hardware e desenvolvi subsistemas, diagramas, documentação e esquemas do módulo do veículo numa equipa distribuída."
+      "Apoiei a arquitectura global de hardware e desenvolvi subsistemas, diagramas, documentação e esquemas do módulo do veículo numa equipa distribuída."
     ],
     "test": [
       "Review and validation by the project lead.",
-      "Revisão e validação pelo responsável do projeto."
+      "Revisão e validação pelo responsável do projecto."
     ],
     "result": [
       "Defined the hardware architecture and core circuits.",
-      "Foram definidos a arquitetura de hardware e os circuitos de base."
+      "Foram definidos a arquitectura de hardware e os circuitos de base."
     ],
     "id": "case-robot",
     "date": "2021–2022",
@@ -222,7 +222,7 @@
     ],
     "work": [
       "Compared the new meter’s documentation with that of the existing unit. Developed automated tests for active and reactive power and voltage tracking, response time, overshoot and oscillations.",
-      "Comparei a documentação do novo medidor com a do equipamento em serviço. Desenvolvi testes automatizados para avaliar o seguimento das referências de potência ativa, potência reativa e tensão, bem como o tempo de resposta, a sobreelevação e as oscilações."
+      "Comparei a documentação do novo medidor com a do equipamento em serviço. Desenvolvi testes automatizados para avaliar o seguimento das referências de potência activa, potência reactiva e tensão, bem como o tempo de resposta, a sobreelevação e as oscilações."
     ],
     "test": [
       "Emulation with signal-generation equipment, followed by remote tests on a real wind park in Germany.",
@@ -242,13 +242,13 @@
   {
     "title": [
       "Master’s Thesis: Bidirectional Converter Control",
-      "Tese de mestrado: controlo de um conversor bidirecional"
+      "Tese de mestrado: controlo de um conversor bidireccional"
     ],
     "org": "FEUP",
     "tags": "power control",
     "goal": [
       "Model an isolated bidirectional dual half-bridge converter with independently controlled duty cycle and phase shift.",
-      "Modelar um conversor bidirecional isolado de dupla meia ponte, com controlo independente do ciclo de trabalho e do desfasamento."
+      "Modelar um conversor bidireccional isolado de dupla meia ponte, com controlo independente do ciclo de trabalho e do desfasamento."
     ],
     "work": [
       "Analysed an isolated dual half-bridge converter and derived power-transfer and transformer RMS-current relationships under duty-cycle and phase-shift control. Developed a two-time-scale averaged state-space model and studied its linearisation and MIMO control with PID and cross compensation.",
@@ -282,7 +282,7 @@
     ],
     "work": [
       "Helped define requirements, divide work and coordinate a ten-student team, including motivation and conflict management. Implemented straight-line navigation in C++ using Kalman-filter position estimates.",
-      "Ajudei a definir requisitos, dividir o trabalho e coordenar uma equipa de dez estudantes, incluindo motivação e gestão de conflitos. Implementei navegação em linha reta em C++ com estimativas de posição de um filtro de Kalman."
+      "Ajudei a definir requisitos, dividir o trabalho e coordenar uma equipa de dez estudantes, incluindo motivação e gestão de conflitos. Implementei navegação em linha recta em C++ com estimativas de posição de um filtro de Kalman."
     ],
     "test": [
       "Integrated the navigation algorithm with position estimates and vehicle subsystems, then tested it on the AGV in the lab.",
@@ -320,7 +320,7 @@
     ],
     "result": [
       "Hands-on experience in converter design, prototyping and validation.",
-      "Experiência prática no projeto, prototipagem e validação de conversores."
+      "Experiência prática no projecto, prototipagem e validação de conversores."
     ],
     "id": "case-formula",
     "date": "2018",
