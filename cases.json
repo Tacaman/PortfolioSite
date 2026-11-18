@@ -85,8 +85,8 @@
     "id": "case-startup",
     "date": "2026",
     "tools": [
-      "SQL Server Management Studio 21 (SQL), Git, Visual Studio Code (C).",
-      "SQL Server Management Studio 21 (SQL), Git, Visual Studio Code (C)."
+      "SQL Server Management Studio 21 (SQL), Git, Visual Studio Code (C) and converter emulation system.",
+      "SQL Server Management Studio 21 (SQL), Git, Visual Studio Code (C) e sistema de emulação do conversor."
     ]
   },
   {
@@ -101,16 +101,16 @@
       "Desenvolver internamente um módulo de 250 kW para um sistema modular de carregamento de veículos elétricos pesados."
     ],
     "work": [
-      "Contributed to circuit design, simulation, prototype debugging, board rework, control firmware and lab validation. Worked on STM firmware for acquisition, peripherals, MOSFET status and protection, OTA updates, supervision and power-converter control. Selected a DC/DC gate driver and designed an adapter PCB for connector adaptation and command and feedback level shifting.",
-      "Contribuí para o projeto e simulação dos circuitos, o diagnóstico de protótipos, o retrabalho de placas e a validação em laboratório. Desenvolvi firmware para microcontroladores STM, incluindo aquisição de sinais, controlo de periféricos, supervisão e proteção de MOSFETs, atualizações OTA e controlo dos conversores. Selecionei o circuito de acionamento (gate driver) do estágio DC/DC e projetei uma placa adaptadora para a interligação e a adaptação dos níveis dos sinais de comando e realimentação."
+      "Contributed to circuit design, simulation, prototype debugging, board rework, control firmware and lab validation. Worked on STM firmware for acquisition, peripheral control, MOSFET protection and control, OTA updates, supervision and power-converter control. Selected a DC/DC gate driver and designed (PCB layout) an adapter board.",
+      "Contribuí para o projeto e simulação de circuitos, diagnóstico de protótipos, retrabalho de placas, firmware de controlo e validação em laboratório. Desenvolvi firmware para microcontroladores STM para aquisição de sinais, controlo de periféricos, proteção e controlo de MOSFETs, atualizações OTA, supervisão e controlo dos conversores. Selecionei um gate driver para o estágio DC/DC e desenhei o layout de uma placa adaptadora."
     ],
     "test": [
-      "Open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW, including two modules in parallel. Component replacement and prototype rework.",
-      "Testes em malha aberta com cargas passivas e em malha fechada com cargas bidireccionais até 500 kW, incluindo dois módulos em paralelo. Reparação e substituição de componentes de protótipos."
+      "Open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW (having two modules working in parallel). Component replacement and prototype rework.",
+      "Ensaios em malha aberta com cargas passivas e em malha fechada com cargas bidirecionais até 500 kW (com dois módulos a funcionar em paralelo). Substituição de componentes e retrabalho de protótipos."
     ],
     "result": [
-      "The team developed a 250 kW module ready to begin certification. Output ranges: 0–1250 V and 0–250 A, subject to the 250 kW power limit; maximum voltage and current are not simultaneous.",
-      "A equipa desenvolveu um módulo de 250 kW pronto para iniciar a certificação. Gamas de saída: 0–1250 V e 0–250 A, sujeitas ao limite de 250 kW; tensão e corrente máximas não são simultâneas."
+      "The team developed a 250 kW module ready to begin certification. Output ranges: 0–1250 V and 0–250 A, subject to the 250 kW power limit.",
+      "A equipa desenvolveu um módulo de 250 kW pronto para iniciar a certificação. Gamas de saída: 0–1250 V e 0–250 A, sujeitas ao limite de 250 kW."
     ],
     "id": "case-mcs",
     "date": "2023–2025",
@@ -225,12 +225,12 @@
       "Comparei a documentação do novo medidor com a do equipamento em serviço. Desenvolvi testes automatizados para avaliar o seguimento das referências de potência ativa, potência reativa e tensão, bem como o tempo de resposta, a sobreelevação e as oscilações."
     ],
     "test": [
-      "Emulation with signal-generation equipment, followed by remote tests on a real wind farm in Germany.",
+      "Emulation with signal-generation equipment, followed by remote tests on a real wind park in Germany.",
       "Emulação com equipamento de geração de sinais, seguida de ensaios remotos num parque eólico na Alemanha."
     ],
     "result": [
-      "Validated the alternative meter and documented poorer performance in several functions compared with the usual configuration.",
-      "Validei o medidor alternativo e documentei desempenho inferior em várias funções face à configuração habitual."
+      "Validated the alternative meter and documented performance in several functions compared with the usual configuration.",
+      "Validei o medidor alternativo e documentei o seu desempenho em várias funções, por comparação com a configuração habitual."
     ],
     "id": "case-ppc",
     "date": "2020–2021",
@@ -251,12 +251,12 @@
       "Modelar um conversor bidirecional isolado de dupla meia ponte, com controlo independente do ciclo de trabalho e do desfasamento."
     ],
     "work": [
-      "Analysed the isolated dual half-bridge converter and derived power-transfer and transformer RMS-current relationships under duty-cycle and phase-shift control. Developed a two-time-scale averaged state-space model and studied its linearisation and MIMO control with PID and cross compensation.",
+      "Analysed an isolated dual half-bridge converter and derived power-transfer and transformer RMS-current relationships under duty-cycle and phase-shift control. Developed a two-time-scale averaged state-space model and studied its linearisation and MIMO control with PID and cross compensation.",
       "Deduzi expressões para a potência transferida e a corrente eficaz no transformador em função do ciclo de trabalho e do desfasamento. Desenvolvi um modelo médio em espaço de estados com duas escalas de tempo e estudei a sua linearização e o controlo multivariável (MIMO) com PID e compensação cruzada."
     ],
     "test": [
-      "Compared model predictions and control behaviour with detailed simulations, including the effects of switching frequency, terminal voltages and circuit R, L and C values. Successfully defended the thesis before a specialist panel.",
-      "Comparei as previsões do modelo e o comportamento do controlo com simulações detalhadas, incluindo o efeito da frequência de comutação, das tensões e dos valores de R, L e C. Defendi a tese perante um júri especializado."
+      "Compared model predictions and control behaviour with detailed simulations, including the effects of switching frequency, primary/secondary voltages and circuit R, L and C values. Successfully defended the thesis before a specialist panel.",
+      "Comparei as previsões do modelo e o comportamento do controlo com simulações detalhadas, incluindo o efeito da frequência de comutação, das tensões no primário e no secundário e dos valores de R, L e C do circuito. Defendi a tese perante um júri especializado."
     ],
     "result": [
       "Published the validated thesis, including converter modelling and a study of cross compensation on a simplified MIMO model.",
