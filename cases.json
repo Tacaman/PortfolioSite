@@ -1,26 +1,26 @@
 [
   {
     "title": [
-      "Mitigating reactive-power restart spikes",
-      "Mitigação de picos de potência reactiva no rearranque"
+      "Mitigating Reactive-power Spikes",
+      "Mitigação de picos de potência reactiva"
     ],
     "org": "Capgemini Engineering (Vestas)",
-    "tags": "control embedded",
+    "tags": "control software validation",
     "goal": [
-      "Reduce abrupt reactive-power changes when turbines restart after a particular stop condition.",
-      "Reduzir variações bruscas de potência reactiva no rearranque de turbinas após uma condição de paragem específica."
+      "Some turbines showed abrupt reactive-power variations when restarting after a stop, associated with incorrect reporting of reactive-power capability.",
+      "Em algumas turbinas foram detectadas variações bruscas de potência reactiva no rearranque após paragem, associadas a um reporte errado de capacidade de produção."
     ],
     "work": [
-      "Traced the interaction between the power plant controller (PPC) and the converter, identified the cause of the spikes and corrected the C logic that reports reactive-power capability in specific operating states.",
-      "Analisei a interacção entre o controlador do parque eólico (PPC) e o conversor, identifiquei a causa dos picos e corrigi a lógica em C que comunica ao PPC os limites de potência reactiva do conversor em determinados estados de funcionamento."
+      "Analysed the interaction between the wind power plant controller (PPC) and converter, identified the cause of the spikes and corrected the C logic communicating reactive-power capability to the PPC in specific operating states.",
+      "Analisei a interacção entre o controlador do parque eólico (PPC) e o conversor, identifiquei a causa dos picos e corrigi a lógica em C que tratava da comunicação ao PPC da capacidade de produção de potência reactiva em determinados estados de funcionamento."
     ],
     "test": [
-      "Verified reactive-power reporting in converter/PPC emulation, followed by field verification with the people who reported the issue.",
-      "Verifiquei os limites comunicados ao PPC em emulação conjunta do conversor e do PPC. A correcção foi depois verificada no terreno com a equipa que reportou o problema."
+      "Verified the corrected values communicated to the PPC in a joint converter/PPC emulation environment. The correction was subsequently verified on turbines where the original issue had been reported.",
+      "Verifiquei a correcção dos valores comunicados ao PPC em ambiente de emulação conjunta do conversor e do PPC. A correcção foi posteriormente verificada no terreno em turbinas que haviam reportado o problema inicial."
     ],
     "result": [
-      "Corrected capability reporting and mitigated restart spikes. This may help in grid compliance tests and reduce electrical stress during restart.",
-      "Corrigi o reporte de capacidade e mitiguei os picos no rearranque. Isto poderá ajudar em ensaios de conformidade com a rede e reduzir o esforço eléctrico no arranque."
+      "Corrected capability reporting, mitigating restart spikes. This may help with grid-compliance tests and reduce stress during startup.",
+      "Corrigi o reporte de capacidade, o que permitiu mitigar os picos no rearranque. Isto poderá ajudar em ensaios de conformidade com a rede e reduzir o stress no arranque."
     ],
     "id": "case-reactive",
     "date": "2026",
@@ -33,26 +33,26 @@
     "id": "case-parameters",
     "date": "2026",
     "org": "Capgemini Engineering (Vestas)",
-    "tags": "control",
+    "tags": "control validation",
     "title": [
-      "Multi-site Converter Parameter Correction",
-      "Correcção de parâmetros de conversores em vários parques"
+      "Converter Parameter Correction",
+      "Correcção de parâmetros de conversores"
     ],
     "goal": [
-      "Correct grid-code-related converter settings across multiple wind farms in Finland.",
-      "Corrigir parâmetros dos conversores relacionados com o código de rede em vários parques eólicos na Finlândia."
+      "Several Finnish wind parks were identified with missing or incorrect parameters required to meet grid-connection requirements.",
+      "Foram identificados alguns parques eólicos na Finlândia que não apresentavam os parâmetros necessários para cumprir os requisitos de ligação à rede."
     ],
     "work": [
-      "Queried the turbine database to identify affected sites, clarified the required settings and corrected incomplete or incorrect values and conflicting override requests.",
-      "Consultei a base de dados de turbinas para identificar os parques afectados, confirmei os valores exigidos e corrigi parâmetros incompletos ou incorrectos. Resolvi também pedidos de alteração de parâmetros que entravam em conflito."
+      "Queried the database covering all turbines to identify the affected parks, confirmed the required values and corrected incomplete or incorrect parameters. Also resolved conflicting parameter override requests.",
+      "Consultei a base de dados com informação de todas as turbinas para identificar os parques afectados, confirmei os valores exigidos e corrigi parâmetros incompletos ou incorrectos. Resolvi também pedidos de alteração de parâmetros que entravam em conflito."
     ],
     "test": [
-      "Confirmed the affected sites and settings with the Finland customer representative who reported the issue.",
-      "Confirmei os parques afectados e os parâmetros com o representante do cliente na Finlândia que reportou o problema."
+      "Confirmed the affected parks and parameter corrections with the Finland representative who reported the issue.",
+      "Confirmei os parques afectados e a correcção dos parâmetros com o representante da Finlândia que reportou o problema."
     ],
     "result": [
-      "Aligned the converter settings at all identified Finnish sites with the applicable grid-code requirements.",
-      "Alinhei os parâmetros dos conversores de todos os parques finlandeses identificados com os requisitos aplicáveis do código de rede."
+      "Aligned converter parameters across all Finnish parks required to meet the country’s specific grid-connection requirements.",
+      "Alinhei os parâmetros dos conversores de todos os parques finlandeses que deveriam cumprir os requisitos específicos de ligação à rede no país."
     ],
     "tools": [
       "SQL Server Management Studio 21 (SQL), Excel and Vestas’s centralised parameter management system.",
@@ -61,26 +61,26 @@
   },
   {
     "title": [
-      "Suppressing false startup alarms",
-      "Supressão de falsos alarmes no arranque"
+      "Suppressing False Startup Alarms",
+      "Supressão de alarmes falsos no arranque"
     ],
     "org": "Capgemini Engineering (Vestas)",
-    "tags": "control embedded",
+    "tags": "control software validation",
     "goal": [
-      "Prevent false converter startup alarms from causing unnecessary periods without production.",
-      "Evitar que falsos alarmes no arranque do conversor provoquem períodos desnecessários sem produção."
+      "Multiple sites reported turbine alarms occurring only during startup and preventing production, leading to considerable financial losses.",
+      "Foi reportado por diversos parques que as turbinas emitiam alarmes apenas durante o arranque, impedindo que iniciassem a produção. Isto significava perdas monetárias consideráveis."
     ],
     "work": [
-      "Queried field alarms under conditions associated with false events and traced the supervision logic. Corrected root causes where possible. Where that was not possible, implemented targeted startup suppression, including for asynchronous hardware and software initialisation.",
-      "Analisei registos de alarmes no terreno e a lógica de supervisão para identificar disparos indevidos. Corrigi a causa sempre que possível; nos restantes casos, implementei supressões específicas para o arranque, por exemplo quando o hardware e o software não terminavam a inicialização ao mesmo tempo."
+      "Analysed field alarm records and the logic of several supervision functions to identify incorrect fault reports. Where possible, corrected the cause directly in the code; otherwise, implemented targeted startup suppression.",
+      "Analisei registos de alarmes no terreno e a lógica de diversas supervisões para identificar situações de reporte incorrecto de anomalias. Quando possível, corrigi a causa directamente no código. Nos restantes casos, implementei supressões específicas para o arranque."
     ],
     "test": [
-      "Tested the corrections and suppressions in emulation and then on a real test turbine.",
-      "Testei as correcções e supressões em emulação e depois numa turbina de ensaio."
+      "For each corrected supervision function, verified suppression of incorrect reports in emulation and then on a real test turbine.",
+      "Para cada supervisão identificada e corrigida, verifiquei a supressão dos reportes incorrectos em ambiente de emulação e depois numa turbina real de testes."
     ],
     "result": [
-      "Reduced periods of low production caused by false startup alarms.",
-      "Reduzi períodos de baixa produção provocados por falsos alarmes no arranque."
+      "Reduced periods without production across several wind parks.",
+      "Foi possível reduzir os períodos de não produção em diversos parques."
     ],
     "id": "case-startup",
     "date": "2026",
@@ -91,56 +91,56 @@
   },
   {
     "title": [
-      "250 kW power module for MCS",
-      "Módulo de potência de 250 kW para carregamento MCS"
+      "250 kW Power Module for MCS",
+      "Módulo de potência de 250 kW para MCS"
     ],
     "org": "i-charging",
-    "tags": "power embedded hardware control",
+    "tags": "electronics control software validation",
     "goal": [
-      "Develop an in-house 250 kW module for a modular Megawatt Charging System for heavy-duty EVs.",
-      "Desenvolver internamente um módulo de 250 kW para um sistema modular de carregamento de veículos eléctricos pesados."
+      "The team was tasked with developing an in-house 250 kW module for a modular high-power charging system for heavy-duty EVs: the Megawatt Charging System.",
+      "Foi pedido à equipa que desenvolvesse internamente um módulo de 250 kW para um sistema modular de carregamento de alta potência para veículos eléctricos pesados — Megawatt Charging System."
     ],
     "work": [
-      "Contributed to circuit design, simulation, prototype debugging, board rework, control firmware and lab validation. Worked on STM firmware for acquisition, peripheral control, MOSFET protection and control, OTA updates, supervision and power-converter control. Selected a DC/DC gate driver and designed (PCB layout) an adapter board.",
-      "Contribuí para o projecto e simulação de circuitos, diagnóstico de protótipos, retrabalho de placas, firmware de controlo e validação em laboratório. Desenvolvi firmware para microcontroladores STM para aquisição de sinais, controlo de periféricos, protecção e controlo de MOSFETs, actualizações OTA, supervisão e controlo dos conversores. Seleccionei um gate driver para o estágio DC/DC e desenhei o layout de uma placa adaptadora."
+      "Worked across almost every project phase: circuit design and simulation; prototype-board debugging and rework; control firmware development; and complete-module lab validation. Developed STM microcontroller software for signal acquisition, peripheral control, MOSFET protection and control, OTA updates, supervision and converter control. Selected a DC/DC gate driver and designed the PCB layout of an adapter board.",
+      "Estive envolvido em praticamente todas as fases do projecto, contribuindo para o projecto e simulação de circuitos, diagnóstico de placas protótipo, correcção de placas, desenvolvimento de firmware de controlo e validação do módulo em laboratório. Desenvolvi software para microcontroladores STM para aquisição de sinais, controlo de periféricos, protecção e controlo de MOSFETs, actualizações OTA, supervisão e controlo dos conversores. Seleccionei um gate driver para o conversor DC/DC e desenhei o layout de uma placa adaptadora."
     ],
     "test": [
-      "Open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW (having two modules working in parallel). Component replacement and prototype rework.",
-      "Ensaios em malha aberta com cargas passivas e em malha fechada com cargas bidireccionais até 500 kW (com dois módulos a funcionar em paralelo). Substituição de componentes e retrabalho de protótipos."
+      "Alongside basic functional checks — injecting signals into board inputs and verifying readings and outputs — took part in open-loop tests with passive loads and closed-loop tests with bidirectional loads up to 500 kW, with two modules operating in parallel.",
+      "Além de validações simples de funcionamento — injecção de sinais nas entradas das placas e validação dos valores lidos e das saídas — participei em ensaios em malha aberta com cargas passivas e em malha fechada com cargas bidireccionais até 500 kW, com dois módulos a funcionar em paralelo."
     ],
     "result": [
-      "The team developed a 250 kW module ready to begin certification. Output ranges: 0–1250 V and 0–250 A, subject to the 250 kW power limit.",
-      "A equipa desenvolveu um módulo de 250 kW pronto para iniciar a certificação. Gamas de saída: 0–1250 V e 0–250 A, sujeitas ao limite de 250 kW."
+      "The team developed a 250 kW module ready to begin certification. Output ranges: 0–1250 V and 0–250 A, subject to the 250 kW power limit. Two-module parallel operation was also confirmed; operation up to 1.25 MW remained to be validated.",
+      "A equipa desenvolveu um módulo de 250 kW pronto para iniciar a certificação. Gamas de saída: 0–1250 V e 0–250 A, sujeitas ao limite de 250 kW. Foi também confirmada a operação em paralelo de dois módulos; posteriormente, deveria ser validada a operação até 1.25 MW."
     ],
     "id": "case-mcs",
     "date": "2023–2025",
     "tools": [
       "LTspice, PSIM, Altium, STM32CubeIDE, BUSMASTER/Kvaser (CAN); high-power bidirectional supply and load, bench supply, oscilloscope, multimeter, soldering station (including MCU replacement) and ST debugger.",
-      "LTspice, PSIM, Altium, STM32CubeIDE, BUSMASTER/Kvaser (CAN); fonte e carga bidireccionais de alta potência, fonte de bancada, osciloscópio, multímetro, estação de soldadura (incluindo substituição de microcontroladores) e depurador ST."
+      "LTspice, PSIM, Altium, STM32CubeIDE, BUSMASTER/Kvaser (CAN); fonte e carga bidireccionais de alta potência, fonte de bancada, osciloscópio, multímetro, estação de soldadura (incluindo substituição de microcontroladores) e debugger de STM."
     ]
   },
   {
     "title": [
-      "3.5 kW bidirectional DC/DC converter",
-      "Conversor DC/DC bidireccional de 3,5 kW"
+      "3.5 kW DC/DC Converter",
+      "Conversor DC/DC de 3.5 kW"
     ],
     "org": "Continental Engineering Services",
-    "tags": "power hardware",
+    "tags": "electronics validation",
     "goal": [
-      "Supply 12 V and 24 V from a 48 V car battery.",
-      "Fornecer 12 V e 24 V a partir de uma bateria automóvel de 48 V."
+      "The company was asked to develop a 3.5 kW DC/DC converter for an electric vehicle, taking a 48 V battery input and providing 12 V and 24 V outputs for the vehicle electronics.",
+      "Foi pedido à empresa que desenvolvesse um conversor DC/DC de 3.5 kW para um veículo eléctrico, com entrada de 48 V a partir de uma bateria e duas saídas, a 12 V e 24 V, para alimentação da electrónica do veículo."
     ],
     "work": [
-      "Developed synchronous-buck schematics and documentation, simulated the circuits and analysed MOSFET losses for different parallel-device configurations.",
-      "Desenvolvi os esquemas e a documentação de um conversor buck síncrono. Simulei os circuitos e calculei as perdas nos MOSFETs para comparar configurações com dispositivos em paralelo."
+      "Developed schematics and converter documentation. Simulated selected circuits and calculated MOSFET losses for several parallel-device configurations to support selection of the most cost-effective solution.",
+      "Desenvolvi os esquemáticos e diversa documentação sobre o conversor. Simulei alguns circuitos e calculei as perdas nos MOSFETs para diversas configurações de dispositivos em paralelo, por forma a escolher a solução mais eficiente em termos económicos."
     ],
     "test": [
-      "Circuit simulation and review of technical documentation.",
-      "Simulação de circuitos e revisão da documentação técnica."
+      "Circuit simulation and technical-documentation review by the technical lead.",
+      "Simulação de circuitos e revisão da documentação técnica pelo responsável técnico."
     ],
     "result": [
       "Delivered schematics, design documentation, simulation results and loss calculations.",
-      "Entreguei esquemas, documentação de projecto, resultados de simulação e cálculos de perdas."
+      "Entreguei esquemáticos, documentação de projecto, resultados de simulação e cálculos de perdas."
     ],
     "id": "case-automotive",
     "date": "2023",
@@ -151,26 +151,26 @@
   },
   {
     "title": [
-      "Battery monitoring and balancing",
+      "Battery Cell Monitoring and Balancing",
       "Monitorização e balanceamento de células de bateria"
     ],
     "org": "Continental Engineering Services",
-    "tags": "hardware",
+    "tags": "electronics validation",
     "goal": [
-      "Improve the monitoring and balancing circuits of a battery management system (BMS).",
-      "Melhorar os circuitos de monitorização e balanceamento de um sistema de gestão de baterias (BMS)."
+      "Investigated ways to improve the monitoring and balancing circuit of a battery management system (BMS) for a project.",
+      "Foi-me pedido que investigasse formas de melhorar o circuito de monitorização e balanceamento de um sistema de gestão de baterias (BMS) para um projecto."
     ],
     "work": [
-      "Reviewed schematics, researched monitoring and protection ICs, and proposed circuit changes. Evaluated temperature, overcurrent, cell-imbalance protection and balancing functions.",
-      "Revi os esquemas e avaliei circuitos integrados de monitorização e protecção. Propus alterações para melhorar o balanceamento entre células e a protecção contra sobrecorrente e temperaturas fora dos limites."
+      "Reviewed the existing circuit and researched integrated monitoring and protection devices. Proposed changes to improve cell balancing and protection against overcurrent and out-of-range temperatures.",
+      "Revi e avaliei o circuito utilizado à época e investiguei circuitos integrados de monitorização e protecção. Propus alterações para melhorar o balanceamento entre células e a protecção contra sobrecorrente e temperaturas fora dos limites."
     ],
     "test": [
-      "Simulated the proposed circuits using the supplier’s device model.",
+      "Simulated the proposed circuits using the manufacturer’s model.",
       "Simulei os circuitos propostos com o modelo do fabricante."
     ],
     "result": [
-      "Proposed improvements to battery cell balancing, monitoring and protection.",
-      "Propus melhorias no balanceamento, monitorização e protecção das células."
+      "Proposed improvements to BMS cell balancing, monitoring and protection.",
+      "Proposta de melhoria no balanceamento, monitorização e protecção das células do sistema BMS."
     ],
     "id": "case-bms",
     "date": "2021–2022",
@@ -181,26 +181,26 @@
   },
   {
     "title": [
-      "Autonomous charging robot",
-      "Robô de carregamento autónomo"
+      "Autonomous Charging Robot",
+      "Robot de carregamento autónomo"
     ],
     "org": "Continental Engineering Services",
-    "tags": "hardware",
+    "tags": "electronics validation",
     "goal": [
-      "Develop a ground-mounted robotic charger and its connection to an EV module.",
-      "Desenvolver um carregador robótico instalado no solo e a ligação ao módulo do veículo eléctrico."
+      "Contributed to an autonomous robotic charging system. After a vehicle parked over the system and validation was complete, a robotic arm would connect to it and initiate charging. The system comprised a ground-mounted module beside the charger and a vehicle-mounted module.",
+      "Estive envolvido num projecto de um sistema robotizado de ligação e carregamento autónomo entre carregador e veículo. Ao estacionar um carro sobre o sistema, após validação, um braço robótico deveria acoplar automaticamente ao veículo e iniciar a carga. O sistema foi dividido em dois módulos: um colocado no chão, junto a um carregador, e outro no próprio veículo."
     ],
     "work": [
-      "Supported the overall hardware architecture and developed vehicle-module subsystems, diagrams, documentation and schematics in a distributed team.",
-      "Apoiei a arquitectura global de hardware e desenvolvi subsistemas, diagramas, documentação e esquemas do módulo do veículo numa equipa distribuída."
+      "Worked on the vehicle module in a distributed team. Supported the overall hardware architecture and developed subsystem documentation, including diagrams, schematics and explanatory text.",
+      "Trabalhei no módulo do veículo numa equipa distribuída. Apoiei o design da arquitectura global de hardware e desenvolvi documentação para diversos subsistemas: diagramas, esquemáticos e textos explicativos."
     ],
     "test": [
-      "Review and validation by the project lead.",
-      "Revisão e validação pelo responsável do projecto."
+      "The project lead reviewed and validated the documentation.",
+      "A revisão e validação da documentação foram feitas pelo responsável do projecto."
     ],
     "result": [
-      "Defined the hardware architecture and core circuits.",
-      "Foram definidos a arquitectura de hardware e os circuitos de base."
+      "Developed the hardware architecture and the core circuits of several subsystems.",
+      "Foram desenvolvidos a arquitectura de hardware e os circuitos base de alguns subsistemas."
     ],
     "id": "case-robot",
     "date": "2021–2022",
@@ -215,22 +215,22 @@
       "Avaliação de um medidor de potência"
     ],
     "org": "Vestas",
-    "tags": "control hardware",
+    "tags": "control software validation",
     "goal": [
-      "Evaluate an alternative supplier power meter for a wind plant controller requested by a customer in Germany.",
-      "Avaliar um medidor de potência de outro fornecedor para o controlador de um parque eólico, a pedido de um cliente na Alemanha."
+      "Evaluated wind park controller (PPC) performance with a meter different from the validated device used at most sites. This was a specific regional request requiring a particular device.",
+      "Fiquei encarregue de avaliar o desempenho do controlador de parque eólico (PPC) com um medidor de potência diferente do equipamento validado e utilizado na maioria dos parques. Foi um pedido expresso de uma região que exigia um dispositivo específico."
     ],
     "work": [
-      "Compared the new meter’s documentation with that of the existing unit. Developed automated tests for active and reactive power and voltage tracking, response time, overshoot and oscillations.",
-      "Comparei a documentação do novo medidor com a do equipamento em serviço. Desenvolvi testes automatizados para avaliar o seguimento das referências de potência activa, potência reactiva e tensão, bem como o tempo de resposta, a sobreelevação e as oscilações."
+      "Compared the new meter’s documentation with that of the existing unit. Developed automated tests for active and reactive power and voltage reference tracking, response time, overshoot and oscillations.",
+      "Comparei a documentação do novo medidor com a do equipamento em serviço. Desenvolvi testes automatizados para avaliar o seguimento das referências de potência activa, potência reactiva e tensão, bem como o tempo de resposta, a sobreelevação (overshoot) e as oscilações."
     ],
     "test": [
-      "Emulation with signal-generation equipment, followed by remote tests on a real wind park in Germany.",
-      "Emulação com equipamento de geração de sinais, seguida de ensaios remotos num parque eólico na Alemanha."
+      "Grid emulation using signal-generation equipment, followed by remote tests on a wind park in Germany.",
+      "Emulação da rede com equipamento de geração de sinais, seguida de ensaios remotos num parque eólico na Alemanha."
     ],
     "result": [
-      "Validated the alternative meter and documented performance in several functions compared with the usual configuration.",
-      "Validei o medidor alternativo e documentei o seu desempenho em várias funções, por comparação com a configuração habitual."
+      "Validated the alternative meter and documented its performance against the usual configuration. The device was approved for use as required by the region.",
+      "Validei o medidor alternativo e documentei o seu desempenho em várias funções, por comparação com a configuração habitual. Foi permitida a utilização do equipamento, tal como exigido pela região."
     ],
     "id": "case-ppc",
     "date": "2020–2021",
@@ -241,26 +241,26 @@
   },
   {
     "title": [
-      "Master’s Thesis: Bidirectional Converter Control",
-      "Tese de mestrado: controlo de um conversor bidireccional"
+      "Master’s Thesis: Modelling and Control of a Bidirectional Converter",
+      "Tese de mestrado: Modelação e Controlo de um conversor bidireccional"
     ],
     "org": "FEUP",
-    "tags": "power control",
+    "tags": "electronics control validation",
     "goal": [
-      "Model an isolated bidirectional dual half-bridge converter with independently controlled duty cycle and phase shift.",
-      "Modelar um conversor bidireccional isolado de dupla meia ponte, com controlo independente do ciclo de trabalho e do desfasamento."
+      "Analysed, modelled and developed a control loop for an isolated bidirectional dual half-bridge converter with independent duty-cycle and switching-signal phase-shift adjustment. The main aim was to assess the additional control freedom provided by varying the duty cycle, which was traditionally fixed at 50%.",
+      "O tema proposto foi analisar, modelar e desenvolver uma malha de controlo para um conversor bidireccional isolado, de topologia dual half-bridge, com ajuste independente do duty-cycle e do desfasamento dos sinais de comando. A ideia fundamental era avaliar o impacto do grau de liberdade adicional do controlo do duty-cycle, tradicionalmente fixado a 50%."
     ],
     "work": [
-      "Analysed an isolated dual half-bridge converter and derived power-transfer and transformer RMS-current relationships under duty-cycle and phase-shift control. Developed a two-time-scale averaged state-space model and studied its linearisation and MIMO control with PID and cross compensation.",
-      "Deduzi expressões para a potência transferida e a corrente eficaz no transformador em função do ciclo de trabalho e do desfasamento. Desenvolvi um modelo médio em espaço de estados com duas escalas de tempo e estudei a sua linearização e o controlo multivariável (MIMO) com PID e compensação cruzada."
+      "Derived expressions for transferred power and transformer RMS current as functions of duty cycle and phase shift. Developed a two-time-scale averaged state-space model and studied its linearisation and MIMO control with PID and cross compensation.",
+      "Deduzi expressões para a potência transferida e a corrente eficaz no transformador em função do duty-cycle e do desfasamento. Desenvolvi um modelo de média em espaço de estados com duas escalas de tempo e estudei a sua linearização e o controlo multivariável (MIMO) com PID e compensação cruzada."
     ],
     "test": [
-      "Compared model predictions and control behaviour with detailed simulations, including the effects of switching frequency, primary/secondary voltages and circuit R, L and C values. Successfully defended the thesis before a specialist panel.",
-      "Comparei as previsões do modelo e o comportamento do controlo com simulações detalhadas, incluindo o efeito da frequência de comutação, das tensões no primário e no secundário e dos valores de R, L e C do circuito. Defendi a tese perante um júri especializado."
+      "Compared model operation and control behaviour with detailed simulations, including switching frequency, primary/secondary voltages and circuit R, L and C values. Defended the thesis before a specialist panel.",
+      "Comparei o funcionamento do modelo e o comportamento do controlo com simulações detalhadas, incluindo o impacto da frequência de comutação, das tensões no primário e no secundário e dos valores de R, L e C do circuito. Defendi a tese perante um júri especializado."
     ],
     "result": [
-      "Published the validated thesis, including converter modelling and a study of cross compensation on a simplified MIMO model.",
-      "Publiquei a tese validada, com a modelação do conversor e um estudo de compensação cruzada num modelo MIMO simplificado."
+      "Published the validated thesis, including converter analysis and modelling and a simplified control system with cross compensation.",
+      "Publiquei a tese validada, com a análise e modelação do conversor e um sistema simplificado de controlo com compensação cruzada."
     ],
     "id": "case-thesis",
     "date": "2020",
@@ -271,26 +271,26 @@
   },
   {
     "title": [
-      "AGV Navigation System and Team Coordination",
-      "Sistema de navegação de um AGV e coordenação de equipa"
+      "Development of an Automated Guided Vehicle (AGV)",
+      "Desenvolvimento de um veículo autónomo industrial (AGV)"
     ],
     "org": "FEUP · Academic / Académico",
-    "tags": "embedded control",
+    "tags": "control software validation",
     "goal": [
-      "Develop a simplified automated guided vehicle over six months in a ten-student team.",
-      "Desenvolver um veículo guiado automaticamente ao longo de seis meses, numa equipa de dez estudantes."
+      "In the final year of the integrated master’s degree, worked in a team of ten students to develop an automated guided vehicle in just six months.",
+      "Durante o último ano do mestrado integrado, participei num projecto com uma equipa de dez estudantes. O nosso objectivo era desenvolver um veículo autónomo industrial (AGV) em apenas seis meses."
     ],
     "work": [
-      "Helped define requirements, divide work and coordinate a ten-student team, including motivation and conflict management. Implemented straight-line navigation in C++ using Kalman-filter position estimates.",
-      "Ajudei a definir requisitos, dividir o trabalho e coordenar uma equipa de dez estudantes, incluindo motivação e gestão de conflitos. Implementei navegação em linha recta em C++ com estimativas de posição de um filtro de Kalman."
+      "Took on a team leadership role, helping define requirements, allocate work and coordinate the team. Motivation and conflict management were major challenges. Implemented straight-line navigation in C++ using position estimates from a Kalman filter developed by another team member.",
+      "Assumi um dos papéis de liderança, ajudando a definir requisitos, dividir o trabalho e coordenar a equipa. A motivação e a gestão de conflitos foram dois dos principais desafios. Em termos técnicos, implementei um algoritmo de navegação em linha recta em C++, baseado em estimativas de posição de um filtro de Kalman desenvolvido por outro elemento da equipa."
     ],
     "test": [
-      "Integrated the navigation algorithm with position estimates and vehicle subsystems, then tested it on the AGV in the lab.",
-      "Integrei o algoritmo de navegação com as estimativas de posição e os subsistemas do veículo e testei o AGV em laboratório."
+      "Integrated the navigation algorithm with the other AGV subsystems and ran movement tests in the laboratory.",
+      "O algoritmo de navegação foi integrado no AGV, juntamente com os restantes subsistemas, e foram feitos testes de deslocação em laboratório."
     ],
     "result": [
-      "The prototype moved autonomously to designated points on the floor with acceptable accuracy.",
-      "O protótipo deslocava-se autonomamente até aos pontos indicados no chão com precisão aceitável."
+      "Developed a simplified robotic prototype that moved autonomously to designated floor positions with acceptable accuracy.",
+      "No final, foi desenvolvido um protótipo simplificado de um robot que se deslocava autonomamente até aos pontos indicados no chão com precisão aceitável."
     ],
     "id": "case-agv",
     "date": "2019",
@@ -305,22 +305,22 @@
       "Conversor de 480 W para Formula Student"
     ],
     "org": "SDU · Erasmus",
-    "tags": "power hardware",
+    "tags": "electronics validation",
     "goal": [
-      "Build and test an isolated Two-Switch Forward converter in a three-student team during Erasmus in Denmark.",
-      "Construir e testar um conversor isolado Two-Switch Forward numa equipa de três estudantes durante o Erasmus na Dinamarca."
+      "During an Erasmus course in Denmark, a three-student team was tasked with developing the central power system for an electric Formula Student car. The team designed, built and tested an isolated Two-Switch Forward converter.",
+      "Durante o meu Erasmus na Dinamarca, foi-nos proposto, numa das cadeiras, desenvolver o sistema de potência central do carro eléctrico para a competição Formula Student. A equipa de três elementos desenvolveu, implementou e testou um conversor isolado de topologia Two-Switch Forward."
     ],
     "work": [
-      "Contributed to planning, topology comparison, loss analysis for semiconductors, passives and transformer, assembly, lab tests and analysis of results.",
-      "Contribuí para o planeamento, comparação de topologias, análise de perdas em semicondutores, passivos e transformador, montagem, ensaios e análise de resultados."
+      "Contributed to planning, topology comparison, semiconductor/passive/transformer loss analysis, assembly, laboratory tests and analysis of results.",
+      "Contribuí para o planeamento, comparação de topologias, análise de perdas em semicondutores, passivos e transformador, montagem, testes de laboratório e análise de resultados."
     ],
     "test": [
       "Laboratory tests on the converter prototype.",
-      "Ensaios em laboratório no protótipo do conversor."
+      "Ensaios em laboratório do protótipo do conversor."
     ],
     "result": [
-      "Hands-on experience in converter design, prototyping and validation.",
-      "Experiência prática no projecto, prototipagem e validação de conversores."
+      "Implemented and validated the converter, while identifying scope for improvement.",
+      "Conversor implementado e com funcionamento validado, embora passível de melhorias."
     ],
     "id": "case-formula",
     "date": "2018",
@@ -331,26 +331,26 @@
   },
   {
     "title": [
-      "Small-scale Factory Automation with PLC, SCADA and MES",
-      "Automação de uma fábrica em pequena escala com PLC, SCADA e MES"
+      "Small-scale Factory Automation",
+      "Automação de uma fábrica em pequena escala"
     ],
     "org": "FEUP · Academic / Académico",
-    "tags": "embedded control",
+    "tags": "control software validation",
     "goal": [
-      "Control production lines with conveyors, identification sensors and robotic tools.",
-      "Controlar linhas de produção com transportadores, sensores de identificação e ferramentas robóticas."
+      "For a master’s course, a four-student team developed control of a small-scale factory with conveyors, identification sensors and robotic tools. The brief included recording production and success statistics in a database, building a SCADA interface, and implementing high-level order management linked to a production optimisation algorithm.",
+      "Numa cadeira do mestrado, foi-nos pedido que, em equipas de quatro elementos, desenvolvêssemos o controlo de uma fábrica em pequena escala, com tapetes transportadores, sensores de identificação e ferramentas robóticas. Deveríamos ainda registar numa base de dados as peças trabalhadas e o sucesso das operações, desenvolver uma interface SCADA e implementar gestão de pedidos a alto nível, associada a um algoritmo de optimização da produção."
     ],
     "work": [
-      "Programmed PLCs in Structured Text, Ladder, FBD and SFC to identify, move and process parts. Built a SCADA interface and a simplified C++ MES to manage product orders.",
-      "Programei PLCs em Structured Text, Ladder, FBD e SFC para identificar, transportar e processar peças. Criei uma interface SCADA e um MES simplificado em C++ para gerir encomendas."
+      "Helped plan and develop PLC control code in Structured Text, FBD and SFC for part identification, transport and processing. Contributed to the SCADA system and part of the simplified C++ MES.",
+      "Participei no planeamento e desenvolvimento do código de controlo das linhas em PLC, nas linguagens Structured Text, FBD e SFC, para identificar, transportar e processar peças. Ajudei no desenvolvimento do sistema SCADA e de parte do sistema MES simplificado, em C++."
     ],
     "test": [
-      "Validated the PLC code, SCADA interface and MES first in the factory emulator and then on the physical production line in the university lab.",
-      "Validei o código de PLC, a interface SCADA e o MES no emulador e depois na linha de produção do laboratório da universidade."
+      "Validated subsystems in simulation using course-provided software, then tested them together on the physical small-scale factory in the university laboratory.",
+      "Os subsistemas foram sendo validados em simulação com software fornecido pelo responsável da cadeira. Posteriormente, foram validados de forma integrada na fábrica real em pequena escala, no laboratório da faculdade."
     ],
     "result": [
-      "Integrated production control, monitoring and order management. The course lecturer validated the system, and its database recorded operations and parts produced.",
-      "Integrei controlo de produção, monitorização e gestão de encomendas. O docente validou o sistema e a base de dados registou operações e peças produzidas."
+      "Delivered an integrated factory control, optimisation and production-recording system, tested against lecturer-defined cases and validated by the lecturer.",
+      "Obtivemos um sistema completo de controlo, optimização e registo de uma fábrica em pequena escala, testado com os casos definidos pelo responsável da cadeira e validado pelo mesmo."
     ],
     "id": "case-plc",
     "date": "2017",
