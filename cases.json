@@ -5,7 +5,7 @@
       "Mitigação de picos de potência reactiva"
     ],
     "org": "Capgemini Engineering (Vestas)",
-    "tags": "control software validation",
+    "tags": "electronics software",
     "goal": [
       "Some turbines showed abrupt reactive-power variations when restarting after a stop, associated with incorrect reporting of reactive-power capability.",
       "Em algumas turbinas foram detectadas variações bruscas de potência reactiva no rearranque após paragem, associadas a um reporte errado de capacidade de produção."
@@ -33,7 +33,7 @@
     "id": "case-parameters",
     "date": "2026",
     "org": "Capgemini Engineering (Vestas)",
-    "tags": "control validation",
+    "tags": "software",
     "title": [
       "Converter Parameter Correction",
       "Correcção de parâmetros de conversores"
@@ -65,7 +65,7 @@
       "Supressão de alarmes falsos no arranque"
     ],
     "org": "Capgemini Engineering (Vestas)",
-    "tags": "control software validation",
+    "tags": "software validation",
     "goal": [
       "Multiple sites reported turbine alarms occurring only during startup and preventing production, leading to considerable financial losses.",
       "Foi reportado por diversos parques que as turbinas emitiam alarmes apenas durante o arranque, impedindo que iniciassem a produção. Isto significava perdas monetárias consideráveis."
@@ -95,7 +95,7 @@
       "Módulo de potência de 250 kW para MCS"
     ],
     "org": "i-charging",
-    "tags": "electronics control software validation",
+    "tags": "electronics software control validation",
     "goal": [
       "The team was tasked with developing an in-house 250 kW module for a modular high-power charging system for heavy-duty EVs: the Megawatt Charging System.",
       "Foi pedido à equipa que desenvolvesse internamente um módulo de 250 kW para um sistema modular de carregamento de alta potência para veículos eléctricos pesados — Megawatt Charging System."
@@ -125,7 +125,7 @@
       "Conversor DC/DC de 3.5 kW"
     ],
     "org": "Continental Engineering Services",
-    "tags": "electronics validation",
+    "tags": "electronics",
     "goal": [
       "The company was asked to develop a 3.5 kW DC/DC converter for an electric vehicle, taking a 48 V battery input and providing 12 V and 24 V outputs for the vehicle electronics.",
       "Foi pedido à empresa que desenvolvesse um conversor DC/DC de 3.5 kW para um veículo eléctrico, com entrada de 48 V a partir de uma bateria e duas saídas, a 12 V e 24 V, para alimentação da electrónica do veículo."
@@ -155,7 +155,7 @@
       "Monitorização e balanceamento de células de bateria"
     ],
     "org": "Continental Engineering Services",
-    "tags": "electronics validation",
+    "tags": "electronics",
     "goal": [
       "Investigated ways to improve the monitoring and balancing circuit of a battery management system (BMS) for a project.",
       "Foi-me pedido que investigasse formas de melhorar o circuito de monitorização e balanceamento de um sistema de gestão de baterias (BMS) para um projecto."
@@ -185,7 +185,7 @@
       "Robot de carregamento autónomo"
     ],
     "org": "Continental Engineering Services",
-    "tags": "electronics validation",
+    "tags": "electronics",
     "goal": [
       "Contributed to an autonomous robotic charging system. After a vehicle parked over the system and validation was complete, a robotic arm would connect to it and initiate charging. The system comprised a ground-mounted module beside the charger and a vehicle-mounted module.",
       "Estive envolvido num projecto de um sistema robotizado de ligação e carregamento autónomo entre carregador e veículo. Ao estacionar um carro sobre o sistema, após validação, um braço robótico deveria acoplar automaticamente ao veículo e iniciar a carga. O sistema foi dividido em dois módulos: um colocado no chão, junto a um carregador, e outro no próprio veículo."
@@ -215,7 +215,7 @@
       "Avaliação de um medidor de potência"
     ],
     "org": "Vestas",
-    "tags": "control software validation",
+    "tags": "software validation",
     "goal": [
       "Evaluated wind park controller (PPC) performance with a meter different from the validated device used at most sites. This was a specific regional request requiring a particular device.",
       "Fiquei encarregue de avaliar o desempenho do controlador de parque eólico (PPC) com um medidor de potência diferente do equipamento validado e utilizado na maioria dos parques. Foi um pedido expresso de uma região que exigia um dispositivo específico."
@@ -245,7 +245,7 @@
       "Tese de mestrado: Modelação e Controlo de um conversor bidireccional"
     ],
     "org": "FEUP",
-    "tags": "electronics control validation",
+    "tags": "electronics control",
     "goal": [
       "Analysed, modelled and developed a control loop for an isolated bidirectional dual half-bridge converter with independent duty-cycle and switching-signal phase-shift adjustment. The main aim was to assess the additional control freedom provided by varying the duty cycle, which was traditionally fixed at 50%.",
       "O tema proposto foi analisar, modelar e desenvolver uma malha de controlo para um conversor bidireccional isolado, de topologia dual half-bridge, com ajuste independente do duty-cycle e do desfasamento dos sinais de comando. A ideia fundamental era avaliar o impacto do grau de liberdade adicional do controlo do duty-cycle, tradicionalmente fixado a 50%."
@@ -275,7 +275,7 @@
       "Desenvolvimento de um veículo autónomo industrial (AGV)"
     ],
     "org": "FEUP · Academic / Académico",
-    "tags": "control software validation",
+    "tags": "software validation",
     "goal": [
       "In the final year of the integrated master’s degree, worked in a team of ten students to develop an automated guided vehicle in just six months.",
       "Durante o último ano do mestrado integrado, participei num projecto com uma equipa de dez estudantes. O nosso objectivo era desenvolver um veículo autónomo industrial (AGV) em apenas seis meses."
