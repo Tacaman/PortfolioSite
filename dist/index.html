@@ -65,7 +65,6 @@ if(darkPalette)document.getElementById("colour-theme").href="themes/green-black.
 .contact-links svg{width:20px;height:20px;flex:none}
 .contact-label{flex:1;overflow-wrap:anywhere}
 .back-to-top{position:fixed;z-index:5;bottom:max(18px,env(safe-area-inset-bottom));right:max(18px,env(safe-area-inset-right));display:grid;grid-auto-flow:column;place-items:center;gap:4px;background:var(--bg);color:var(--ink);border:1px solid var(--line);box-shadow:0 5px 20px #17263828;border-radius:8px;padding:10px 12px;min-height:44px}
-.back-to-top{touch-action:manipulation;min-width:48px;min-height:48px;z-index:20}
 .back-to-top:hover,.back-to-top:focus-visible{border-color:var(--lime)}
 .back-to-top[hidden]{display:none}
 @media(max-width:930px){.offwork-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -418,12 +417,9 @@ const topButton=document.getElementById('back-to-top');
 function updateTopButton(){topButton.hidden=window.scrollY<220;}
 topButton.addEventListener('click',event=>{
  event.preventDefault();
- if(location.hash)history.replaceState(null,'',location.pathname+location.search);
- // Jump immediately: a long smooth scroll can be interrupted by mobile touch
- // inertia and viewport changes while the browser toolbar expands or collapses.
- window.scrollTo({top:0,left:0,behavior:'instant'});
  document.querySelector('header .brand').focus({preventScroll:true});
- updateTopButton();
+ if(location.hash)history.replaceState(null,'',location.pathname+location.search);
+ window.scrollTo({top:0});
 });
 window.addEventListener('scroll',updateTopButton,{passive:true});
 window.addEventListener('pageshow',updateTopButton);
